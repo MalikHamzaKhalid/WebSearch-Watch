@@ -12,6 +12,7 @@
 		B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3E2C7E443D0097E0C0 /* ContentView.swift */; };
 		B7613B412C7E443E0097E0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7613B402C7E443E0097E0C0 /* Assets.xcassets */; };
 		B7613B442C7E443E0097E0C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7613B432C7E443E0097E0C0 /* Preview Assets.xcassets */; };
+		B7613B502C7E4B1B0097E0C0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B7613B3E2C7E443D0097E0C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7613B402C7E443E0097E0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7613B432C7E443E0097E0C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */,
-				B7613B3E2C7E443D0097E0C0 /* ContentView.swift */,
+				B7613B4E2C7E4B060097E0C0 /* Views */,
 				B7613B402C7E443E0097E0C0 /* Assets.xcassets */,
 				B7613B422C7E443E0097E0C0 /* Preview Content */,
 			);
@@ -92,6 +94,15 @@
 				B7613B432C7E443E0097E0C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B7613B4E2C7E4B060097E0C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7613B3E2C7E443D0097E0C0 /* ContentView.swift */,
+				B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 			files = (
 				B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */,
 				B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */,
+				B7613B502C7E4B1B0097E0C0 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sheraz.WatchOS-biltz.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -371,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sheraz.WatchOS-biltz.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -392,7 +404,7 @@
 				DEVELOPMENT_TEAM = 5C4RYFL9T6;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sheraz.WatchOS-biltz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -408,7 +420,7 @@
 				DEVELOPMENT_TEAM = 5C4RYFL9T6;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sheraz.WatchOS-biltz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
