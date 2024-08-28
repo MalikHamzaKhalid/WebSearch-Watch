@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7613B382C7E443D0097E0C0 /* WatchOS-biltz Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B7613B372C7E443D0097E0C0 /* WatchOS-biltz Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7613B382C7E443D0097E0C0 /* WatchOS-Blitz.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */; };
 		B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3E2C7E443D0097E0C0 /* ContentView.swift */; };
 		B7613B412C7E443E0097E0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7613B402C7E443E0097E0C0 /* Assets.xcassets */; };
@@ -32,7 +32,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				B7613B382C7E443D0097E0C0 /* WatchOS-biltz Watch App.app in Embed Watch Content */,
+				B7613B382C7E443D0097E0C0 /* WatchOS-Blitz.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		B7613B312C7E443D0097E0C0 /* WatchOS-biltz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-biltz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7613B372C7E443D0097E0C0 /* WatchOS-biltz Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-biltz Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-Blitz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOS_biltzApp.swift; sourceTree = "<group>"; };
 		B7613B3E2C7E443D0097E0C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7613B402C7E443E0097E0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B7613B312C7E443D0097E0C0 /* WatchOS-biltz.app */,
-				B7613B372C7E443D0097E0C0 /* WatchOS-biltz Watch App.app */,
+				B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			);
 			name = "WatchOS-biltz Watch App";
 			productName = "WatchOS-biltz Watch App";
-			productReference = B7613B372C7E443D0097E0C0 /* WatchOS-biltz Watch App.app */;
+			productReference = B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,13 +339,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS-biltz Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C4RYFL9T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,7 +354,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -369,13 +369,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS-biltz Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C4RYFL9T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -384,7 +384,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

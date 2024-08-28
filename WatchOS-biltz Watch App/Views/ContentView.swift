@@ -39,7 +39,7 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(item.title ?? "")
                                     .font(.system(size: 14))
-                                    .lineLimit(1)
+                                    .lineLimit(3)
                                 
                                 Text(item.displayLink ?? "")
                                     .font(.system(size: 12))
@@ -53,14 +53,17 @@ struct ContentView: View {
                             }
                         }
                         .padding(.vertical, 4)
+                        .onAppear {
+                            // Check if the current item is the last one
+                            if item.id == viewModel.items.last?.id {
+                                viewModel.requestNextPage(searchText: searchText)
+                            }
+                        }
                     }
                     
                     if viewModel.isLoading {
                         ProgressView()
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .onAppear {
-                                viewModel.requestNextPage(searchText: searchText)
-                            }
                     }
                 }
                 .listStyle(CarouselListStyle())

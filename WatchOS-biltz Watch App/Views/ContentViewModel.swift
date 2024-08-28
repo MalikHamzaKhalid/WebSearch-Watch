@@ -11,7 +11,11 @@ class ContentViewModel: ObservableObject {
     @Published var items: [Item] = []
     @Published var errorMessage: String = ""
     private var currentPage = 0
+    private var resultsPerPage = 10 // Change this based on your API settings
     var isLoading = false
+    
+    private let apiKey = "AIzaSyB9eX9rPia-rd4Ca9whwrI5ZqiEl_-PWx0"
+    private let cx = "66718f87f2dfc45ac"
     
     func requestNextPage(searchText: String) {
         guard !isLoading else { return }  // Prevent multiple simultaneous requests
@@ -22,25 +26,30 @@ class ContentViewModel: ObservableObject {
     func fetchData(searchText: String, page: Int = 0) {
         guard !searchText.isEmpty else { return }
         
+        guard !isLoading else { return } // Prevent multiple simultaneous requests
+        
         currentPage = page
         isLoading = true
         
-        let headers = [
-            "X-RapidAPI-Key": "5d5f123215mshe2de294047c807ep14997ejsnae4da76a4c07",
-            "X-RapidAPI-Host": "google-search72.p.rapidapi.com"
-        ]
+        let query = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         
-        let urlString = "https://google-search72.p.rapidapi.com/search?q=\(searchText)&gl=us&lr=en&num=20&start=\(currentPage)&sort=relevance"
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        // Calculate the correct start index based on currentPage and resultsPerPage
+       
+        var startIndex = resultsPerPage * currentPage
         
-        guard let url = URL(string: urlString ?? "") else {
+//        if currentPage == 0 {
+//            startIndex = 0
+//        }
+        
+        let urlString = "https://customsearch.googleapis.com/customsearch/v1?q=\(query)&key=\(apiKey)&cx=\(cx)&start=\(startIndex)"
+        
+        guard let url = URL(string: urlString) else {
             isLoading = false
             return
         }
         
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
         
         URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
             guard let self = self else { return }
@@ -53,13 +62,11 @@ class ContentViewModel: ObservableObject {
             
             if let error = error {
                 print("Error: \(error.localizedDescription)")
-                isLoading = false
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 print("Invalid response")
-                isLoading = false
                 return
             }
             
@@ -76,7 +83,9 @@ class ContentViewModel: ObservableObject {
                             print("Error message = \(self.errorMessage)")
                         }
                     } else {
-                        errorMessage = ""
+                        DispatchQueue.main.async {
+                            self.errorMessage = ""
+                        }
                     }
                     if let newItems = response.items {
                         DispatchQueue.main.async {
@@ -103,8 +112,37 @@ struct TasksListDAO: Codable {
 }
 
 struct Item: Codable, Identifiable {
-    var id: String? = UUID().uuidString
+    var id: String = UUID().uuidString // Automatically generate an ID
     let title, htmlTitle: String?
     let link: String?
     let displayLink, snippet, htmlSnippet: String?
+    
+    // Custom initializer to set the ID after decoding
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.title = try container.decodeIfPresent(String.self, forKey: .title)
+            self.htmlTitle = try container.decodeIfPresent(String.self, forKey: .htmlTitle)
+            self.link = try container.decodeIfPresent(String.self, forKey: .link)
+            self.displayLink = try container.decodeIfPresent(String.self, forKey: .displayLink)
+            self.snippet = try container.decodeIfPresent(String.self, forKey: .snippet)
+            self.htmlSnippet = try container.decodeIfPresent(String.self, forKey: .htmlSnippet)
+            // Assign a unique ID after decoding
+            self.id = UUID().uuidString
+        }
+
+        // Default initializer for manual creation of Item objects
+        init(id: String = UUID().uuidString, title: String?, htmlTitle: String?, link: String?, displayLink: String?, snippet: String?, htmlSnippet: String?) {
+            self.id = id
+            self.title = title
+            self.htmlTitle = htmlTitle
+            self.link = link
+            self.displayLink = displayLink
+            self.snippet = snippet
+            self.htmlSnippet = htmlSnippet
+        }
+
+        // Define the keys used in the decoding process
+        enum CodingKeys: String, CodingKey {
+            case title, htmlTitle, link, displayLink, snippet, htmlSnippet
+        }
 }
