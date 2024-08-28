@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6487B0CA296C81F90027DC23 /* GoogleSearch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6487B0C9296C81F90027DC23 /* GoogleSearch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6487B0CF296C81F90027DC23 /* GoogleSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487B0CE296C81F90027DC23 /* GoogleSearchApp.swift */; };
+		6487B0D1296C81F90027DC23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6487B0D0296C81F90027DC23 /* ContentView.swift */; };
+		6487B0D3296C81FA0027DC23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6487B0D2296C81FA0027DC23 /* Assets.xcassets */; };
+		6487B0D6296C81FA0027DC23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6487B0D5296C81FA0027DC23 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6487B0CB296C81F90027DC23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6487B0BD296C81F90027DC23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6487B0C8296C81F90027DC23;
+			remoteInfo = "GoogleSearch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6487B0DC296C81FA0027DC23 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6487B0CA296C81F90027DC23 /* GoogleSearch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6487B0C3296C81F90027DC23 /* GoogleSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6487B0C9296C81F90027DC23 /* GoogleSearch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoogleSearch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6487B0CE296C81F90027DC23 /* GoogleSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchApp.swift; sourceTree = "<group>"; };
+		6487B0D0296C81F90027DC23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6487B0D2296C81FA0027DC23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6487B0D5296C81FA0027DC23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6487B0C6296C81F90027DC23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6487B0BC296C81F90027DC23 = {
+			isa = PBXGroup;
+			children = (
+				6487B0CD296C81F90027DC23 /* GoogleSearch Watch App */,
+				6487B0C4296C81F90027DC23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6487B0C4296C81F90027DC23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6487B0C3296C81F90027DC23 /* GoogleSearch.app */,
+				6487B0C9296C81F90027DC23 /* GoogleSearch Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6487B0CD296C81F90027DC23 /* GoogleSearch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				6487B0CE296C81F90027DC23 /* GoogleSearchApp.swift */,
+				6487B0D0296C81F90027DC23 /* ContentView.swift */,
+				6487B0D2296C81FA0027DC23 /* Assets.xcassets */,
+				6487B0D4296C81FA0027DC23 /* Preview Content */,
+			);
+			path = "GoogleSearch Watch App";
+			sourceTree = "<group>";
+		};
+		6487B0D4296C81FA0027DC23 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6487B0D5296C81FA0027DC23 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6487B0C2296C81F90027DC23 /* GoogleSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6487B0DD296C81FA0027DC23 /* Build configuration list for PBXNativeTarget "GoogleSearch" */;
+			buildPhases = (
+				6487B0C1296C81F90027DC23 /* Resources */,
+				6487B0DC296C81FA0027DC23 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6487B0CC296C81F90027DC23 /* PBXTargetDependency */,
+			);
+			name = GoogleSearch;
+			productName = GoogleSearch;
+			productReference = 6487B0C3296C81F90027DC23 /* GoogleSearch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		6487B0C8296C81F90027DC23 /* GoogleSearch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6487B0D9296C81FA0027DC23 /* Build configuration list for PBXNativeTarget "GoogleSearch Watch App" */;
+			buildPhases = (
+				6487B0C5296C81F90027DC23 /* Sources */,
+				6487B0C6296C81F90027DC23 /* Frameworks */,
+				6487B0C7296C81F90027DC23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoogleSearch Watch App";
+			productName = "GoogleSearch Watch App";
+			productReference = 6487B0C9296C81F90027DC23 /* GoogleSearch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6487B0BD296C81F90027DC23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					6487B0C2296C81F90027DC23 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					6487B0C8296C81F90027DC23 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 6487B0C0296C81F90027DC23 /* Build configuration list for PBXProject "GoogleSearch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6487B0BC296C81F90027DC23;
+			productRefGroup = 6487B0C4296C81F90027DC23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6487B0C2296C81F90027DC23 /* GoogleSearch */,
+				6487B0C8296C81F90027DC23 /* GoogleSearch Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6487B0C1296C81F90027DC23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6487B0C7296C81F90027DC23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6487B0D6296C81FA0027DC23 /* Preview Assets.xcassets in Resources */,
+				6487B0D3296C81FA0027DC23 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6487B0C5296C81F90027DC23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6487B0D1296C81F90027DC23 /* ContentView.swift in Sources */,
+				6487B0CF296C81F90027DC23 /* GoogleSearchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6487B0CC296C81F90027DC23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6487B0C8296C81F90027DC23 /* GoogleSearch Watch App */;
+			targetProxy = 6487B0CB296C81F90027DC23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6487B0D7296C81FA0027DC23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6487B0D8296C81FA0027DC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6487B0DA296C81FA0027DC23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GoogleSearch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = PP7677B32H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GoogleSearch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClientApp.GoogleSearch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		6487B0DB296C81FA0027DC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GoogleSearch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = PP7677B32H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GoogleSearch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClientApp.GoogleSearch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		6487B0DE296C81FA0027DC23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP7677B32H;
+				INFOPLIST_KEY_CFBundleDisplayName = GoogleSearch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClientApp.GoogleSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6487B0DF296C81FA0027DC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP7677B32H;
+				INFOPLIST_KEY_CFBundleDisplayName = GoogleSearch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClientApp.GoogleSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6487B0C0296C81F90027DC23 /* Build configuration list for PBXProject "GoogleSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6487B0D7296C81FA0027DC23 /* Debug */,
+				6487B0D8296C81FA0027DC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6487B0D9296C81FA0027DC23 /* Build configuration list for PBXNativeTarget "GoogleSearch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6487B0DA296C81FA0027DC23 /* Debug */,
+				6487B0DB296C81FA0027DC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6487B0DD296C81FA0027DC23 /* Build configuration list for PBXNativeTarget "GoogleSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6487B0DE296C81FA0027DC23 /* Debug */,
+				6487B0DF296C81FA0027DC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6487B0BD296C81F90027DC23 /* Project object */;
+}
