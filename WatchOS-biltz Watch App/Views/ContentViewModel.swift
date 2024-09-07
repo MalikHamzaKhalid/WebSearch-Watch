@@ -35,7 +35,7 @@ class ContentViewModel: ObservableObject {
         
         // Calculate the correct start index based on currentPage and resultsPerPage
        
-        var startIndex = resultsPerPage * currentPage
+        let startIndex = resultsPerPage * currentPage
         
 //        if currentPage == 0 {
 //            startIndex = 0

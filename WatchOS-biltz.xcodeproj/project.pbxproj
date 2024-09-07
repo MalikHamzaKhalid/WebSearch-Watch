@@ -343,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS-biltz Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5C4RYFL9T6;
+				DEVELOPMENT_TEAM = 28833SX52Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -373,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS-biltz Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5C4RYFL9T6;
+				DEVELOPMENT_TEAM = 28833SX52Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -401,7 +401,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5C4RYFL9T6;
+				DEVELOPMENT_TEAM = 28833SX52Q;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
@@ -417,7 +417,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5C4RYFL9T6;
+				DEVELOPMENT_TEAM = 28833SX52Q;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;

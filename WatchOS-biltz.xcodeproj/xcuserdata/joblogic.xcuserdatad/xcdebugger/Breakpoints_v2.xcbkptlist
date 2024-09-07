@@ -50,36 +50,6 @@
             endingLineNumber = "78"
             landmarkName = "fetchData(searchText:page:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "13CAA941-FF81-46EE-AE35-C3E98EB4F7DC - 92541dbb3b911dcc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchOS_Blitz.ContentViewModel.fetchData(searchText: Swift.String, page: Swift.Int) -&gt; ()"
-                  moduleName = "WatchOS-Blitz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joblogic/Desktop/WatchOS-biltz/WatchOS-biltz%20Watch%20App/Views/ContentViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78">
-               </Location>
-               <Location
-                  uuid = "13CAA941-FF81-46EE-AE35-C3E98EB4F7DC - 8976ceee1a110908"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchOS_Blitz.ContentViewModel.fetchData(searchText: Swift.String, page: Swift.Int) -&gt; ()"
-                  moduleName = "WatchOS-Blitz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joblogic/Desktop/WatchOS-biltz/WatchOS-biltz%20Watch%20App/Views/ContentViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
