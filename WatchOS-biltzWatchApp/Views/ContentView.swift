@@ -68,7 +68,14 @@ struct ContentView: View {
                 }
                 .listStyle(CarouselListStyle())
             }
-            .navigationTitle("Search")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gearshape")
+                            .imageScale(.small)
+                    }
+                }
+            }
         }
     }
 }
