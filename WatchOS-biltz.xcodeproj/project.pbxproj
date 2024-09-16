@@ -14,6 +14,7 @@
 		B75DF9D52C98A65C00F22B6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D12C98A65C00F22B6B /* UserManager.swift */; };
 		B75DF9D92C98AD5000F22B6B /* InAppPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D72C98AD5000F22B6B /* InAppPurchaseView.swift */; };
 		B75DF9DB2C98CFE900F22B6B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9DA2C98CFE900F22B6B /* KeychainManager.swift */; };
+		B75DF9DE2C98D76D00F22B6B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75DF9DD2C98D76D00F22B6B /* StoreKit.framework */; };
 		B7613B382C7E443D0097E0C0 /* WatchOS-Blitz.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */; };
 		B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3E2C7E443D0097E0C0 /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 		B75DF9D12C98A65C00F22B6B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		B75DF9D72C98AD5000F22B6B /* InAppPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseView.swift; sourceTree = "<group>"; };
 		B75DF9DA2C98CFE900F22B6B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		B75DF9DD2C98D76D00F22B6B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		B7613B312C7E443D0097E0C0 /* WatchOS-biltz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-biltz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-Blitz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOS_biltzApp.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75DF9DE2C98D76D00F22B6B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,11 +120,20 @@
 			path = IAPView;
 			sourceTree = "<group>";
 		};
+		B75DF9DC2C98D76D00F22B6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B75DF9DD2C98D76D00F22B6B /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7613B2A2C7E443D0097E0C0 = {
 			isa = PBXGroup;
 			children = (
 				B7613B3B2C7E443D0097E0C0 /* WatchOS-biltzWatchApp */,
 				B7613B322C7E443D0097E0C0 /* Products */,
+				B75DF9DC2C98D76D00F22B6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -423,7 +435,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
@@ -454,7 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
@@ -475,7 +487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 28833SX52Q;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -491,7 +503,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 28833SX52Q;
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchOS-biltz";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
