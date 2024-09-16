@@ -9,34 +9,39 @@ import Foundation
 class UserManager {
     static let shared = UserManager()
     
-    private let defaults = UserDefaults.standard
-
     private init() {}
-
-    func initializeCredits() {
-        let isFirstLaunch = !defaults.bool(forKey: Constants.UserDefaultsKeys.creditsInitialized)
-        if isFirstLaunch {
-            defaults.set(Constants.Credits.initialCredits, forKey: Constants.UserDefaultsKeys.userCredits)
-            defaults.set(true, forKey: Constants.UserDefaultsKeys.creditsInitialized)
-        }
+    
+    private let creditsKey = "userCredits"
+    
+    // Function to update and save credits after usage
+    func initCredits(by amount: Int) {
+        KeychainManager.shared.save("\(amount)", forKey: creditsKey)
     }
-
-    func addCredits(_ credits: Int) {
-        let currentCredits = defaults.integer(forKey: Constants.UserDefaultsKeys.userCredits)
-        defaults.set(currentCredits + credits, forKey: Constants.UserDefaultsKeys.userCredits)
-    }
-
-    func consumeCredit() -> Bool {
-        var currentCredits = defaults.integer(forKey: Constants.UserDefaultsKeys.userCredits)
-        if currentCredits > 0 {
-            currentCredits -= 1
-            defaults.set(currentCredits, forKey: Constants.UserDefaultsKeys.userCredits)
-            return true
-        }
-        return false
-    }
-
+    
+    // Function to initialize or get current credits
     func getCurrentCredits() -> Int {
-        return defaults.integer(forKey: Constants.UserDefaultsKeys.userCredits)
+        if let savedCredits = KeychainManager.shared.getValue(forKey: creditsKey),
+           let currentCredits = Int(savedCredits) {
+            // Return saved credits from Keychain
+            return currentCredits
+        } else {
+            // First-time launch or no credits found, give 150 credits
+            let initialCredits = 150
+            initCredits(by: initialCredits)
+            return initialCredits
+        }
+    }
+    
+    // Function to update and save credits after usage
+    func updateCredits() {
+        var currentCredits = getCurrentCredits()
+        currentCredits -= 1
+        KeychainManager.shared.save("\(currentCredits)", forKey: creditsKey)
+    }
+    
+    // Function to check if the user has used their credits
+    func hasCredits() -> Bool {
+        let currentCredits = getCurrentCredits()
+        return currentCredits > 0
     }
 }

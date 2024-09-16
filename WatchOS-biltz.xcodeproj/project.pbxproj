@@ -12,8 +12,8 @@
 		B75DF9CF2C98A64C00F22B6B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9CD2C98A64C00F22B6B /* PurchaseButton.swift */; };
 		B75DF9D42C98A65C00F22B6B /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D02C98A65C00F22B6B /* IAPManager.swift */; };
 		B75DF9D52C98A65C00F22B6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D12C98A65C00F22B6B /* UserManager.swift */; };
-		B75DF9D62C98A65C00F22B6B /* VersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D22C98A65C00F22B6B /* VersionManager.swift */; };
 		B75DF9D92C98AD5000F22B6B /* InAppPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D72C98AD5000F22B6B /* InAppPurchaseView.swift */; };
+		B75DF9DB2C98CFE900F22B6B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9DA2C98CFE900F22B6B /* KeychainManager.swift */; };
 		B7613B382C7E443D0097E0C0 /* WatchOS-Blitz.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */; };
 		B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3E2C7E443D0097E0C0 /* ContentView.swift */; };
@@ -52,8 +52,8 @@
 		B75DF9CD2C98A64C00F22B6B /* PurchaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		B75DF9D02C98A65C00F22B6B /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		B75DF9D12C98A65C00F22B6B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		B75DF9D22C98A65C00F22B6B /* VersionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionManager.swift; sourceTree = "<group>"; };
 		B75DF9D72C98AD5000F22B6B /* InAppPurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseView.swift; sourceTree = "<group>"; };
+		B75DF9DA2C98CFE900F22B6B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		B7613B312C7E443D0097E0C0 /* WatchOS-biltz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-biltz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-Blitz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOS_biltzApp.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			children = (
 				B75DF9D02C98A65C00F22B6B /* IAPManager.swift */,
 				B75DF9D12C98A65C00F22B6B /* UserManager.swift */,
-				B75DF9D22C98A65C00F22B6B /* VersionManager.swift */,
+				B75DF9DA2C98CFE900F22B6B /* KeychainManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 				B75DF9CC2C98A5EC00F22B6B /* SettingsView.swift in Sources */,
 				B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */,
 				B75DF9CF2C98A64C00F22B6B /* PurchaseButton.swift in Sources */,
-				B75DF9D62C98A65C00F22B6B /* VersionManager.swift in Sources */,
 				B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */,
+				B75DF9DB2C98CFE900F22B6B /* KeychainManager.swift in Sources */,
 				B75DF9D92C98AD5000F22B6B /* InAppPurchaseView.swift in Sources */,
 				B7613B502C7E4B1B0097E0C0 /* ContentViewModel.swift in Sources */,
 				B75DF9D52C98A65C00F22B6B /* UserManager.swift in Sources */,

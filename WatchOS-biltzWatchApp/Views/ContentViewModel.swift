@@ -30,11 +30,8 @@ class ContentViewModel: ObservableObject {
         
         guard !isLoading else { return } // Prevent multiple simultaneous requests
         
-        if UserManager.shared.consumeCredit() {
-            print("Credit consumed. Remaining credits: \(UserManager.shared.getCurrentCredits())")
-//            showPurchaseAlert = true
-//            return
-        } else {
+        // If there is no credit then show the purchases alert
+        if !UserManager.shared.hasCredits() {
             print("No credits left. Please purchase more.")
             showPurchaseAlert = true
             return
@@ -95,6 +92,9 @@ class ContentViewModel: ObservableObject {
                         }
                     }
                     if let newItems = response.items {
+                        // Decrease credit amount
+                        UserManager.shared.updateCredits()
+                        
                         DispatchQueue.main.async {
                             if self.currentPage == 0 {
                                 self.items = newItems

@@ -12,10 +12,6 @@ struct WatchOS_biltz_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    // Handle version update and credit initialization when the app launches
-                    VersionManager.shared.handleVersionUpdate()
-                }
         }
     }
 }

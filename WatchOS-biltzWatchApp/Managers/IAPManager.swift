@@ -128,14 +128,44 @@ class IAPManager: NSObject, SKPaymentTransactionObserver, SKProductsRequestDeleg
     private func deliverCredits(for productIdentifier: String) {
         switch productIdentifier {
         case Constants.IAPProductIdentifiers.credits120:
-            UserManager.shared.addCredits(Constants.Credits.creditsFor120Purchase)
+            UserManager.shared.initCredits(by: Constants.Credits.creditsFor120Purchase)
         case Constants.IAPProductIdentifiers.credits200:
-            UserManager.shared.addCredits(Constants.Credits.creditsFor200Purchase)
+            UserManager.shared.initCredits(by:Constants.Credits.creditsFor200Purchase)
         case Constants.IAPProductIdentifiers.credits300:
-            UserManager.shared.addCredits(Constants.Credits.creditsFor300Purchase)
+            UserManager.shared.initCredits(by:Constants.Credits.creditsFor300Purchase)
         default:
             break
         }
     }
 }
 
+extension IAPManager {
+    
+    func checkBonusCredits() {
+        let bonusKey = "bonusCredits"
+
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: bonusKey,
+            kSecReturnData as String: kCFBooleanTrue!,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+
+        var dataTypeRef: AnyObject? = nil
+        let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+
+        if status == errSecSuccess {
+            let result = dataTypeRef as! Data
+            let hasUsedBonusCredits = String(data: result, encoding: .utf8)
+            if hasUsedBonusCredits == "true" {
+                print("User has already used bonus credits.")
+            } else {
+                print("User has not used bonus credits.")
+            }
+        } else {
+            print("User has not received bonus credits yet.")
+        }
+
+    }
+    
+}
