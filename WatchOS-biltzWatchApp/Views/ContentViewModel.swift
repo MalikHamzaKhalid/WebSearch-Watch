@@ -32,14 +32,8 @@ class ContentViewModel: ObservableObject {
         isLoading = true
         
         let query = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        
-        // Calculate the correct start index based on currentPage and resultsPerPage
-       
+               
         let startIndex = resultsPerPage * currentPage
-        
-//        if currentPage == 0 {
-//            startIndex = 0
-//        }
         
         let urlString = "https://customsearch.googleapis.com/customsearch/v1?q=\(query)&key=\(apiKey)&cx=\(cx)&start=\(startIndex)"
         

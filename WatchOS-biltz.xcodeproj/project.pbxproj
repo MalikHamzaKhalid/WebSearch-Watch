@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75DF9C92C98A5D800F22B6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9C72C98A5D800F22B6B /* Constants.swift */; };
+		B75DF9CC2C98A5EC00F22B6B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9CA2C98A5EC00F22B6B /* SettingsView.swift */; };
+		B75DF9CF2C98A64C00F22B6B /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9CD2C98A64C00F22B6B /* PurchaseButton.swift */; };
+		B75DF9D42C98A65C00F22B6B /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D02C98A65C00F22B6B /* IAPManager.swift */; };
+		B75DF9D52C98A65C00F22B6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D12C98A65C00F22B6B /* UserManager.swift */; };
+		B75DF9D62C98A65C00F22B6B /* VersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DF9D22C98A65C00F22B6B /* VersionManager.swift */; };
 		B7613B382C7E443D0097E0C0 /* WatchOS-Blitz.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */; };
 		B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B3E2C7E443D0097E0C0 /* ContentView.swift */; };
 		B7613B412C7E443E0097E0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7613B402C7E443E0097E0C0 /* Assets.xcassets */; };
 		B7613B442C7E443E0097E0C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7613B432C7E443E0097E0C0 /* Preview Assets.xcassets */; };
 		B7613B502C7E4B1B0097E0C0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */; };
-		B7613BE02C8C4B0B0097E0C0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613BDE2C8C4B0B0097E0C0 /* SettingsView.swift */; };
-		B7613BE32C8C4B150097E0C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7613BE12C8C4B150097E0C0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B75DF9C72C98A5D800F22B6B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B75DF9CA2C98A5EC00F22B6B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B75DF9CD2C98A64C00F22B6B /* PurchaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		B75DF9D02C98A65C00F22B6B /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		B75DF9D12C98A65C00F22B6B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		B75DF9D22C98A65C00F22B6B /* VersionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionManager.swift; sourceTree = "<group>"; };
 		B7613B312C7E443D0097E0C0 /* WatchOS-biltz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-biltz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B372C7E443D0097E0C0 /* WatchOS-Blitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchOS-Blitz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOS_biltzApp.swift; sourceTree = "<group>"; };
@@ -49,8 +59,6 @@
 		B7613B402C7E443E0097E0C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7613B432C7E443E0097E0C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		B7613BDE2C8C4B0B0097E0C0 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		B7613BE12C8C4B150097E0C0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7613BEF2C8C5E4B0097E0C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +73,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75DF9C82C98A5D800F22B6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B75DF9C72C98A5D800F22B6B /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B75DF9CB2C98A5EC00F22B6B /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				B75DF9CA2C98A5EC00F22B6B /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		B75DF9CE2C98A64C00F22B6B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B75DF9CD2C98A64C00F22B6B /* PurchaseButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B75DF9D32C98A65C00F22B6B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B75DF9D02C98A65C00F22B6B /* IAPManager.swift */,
+				B75DF9D12C98A65C00F22B6B /* UserManager.swift */,
+				B75DF9D22C98A65C00F22B6B /* VersionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		B7613B2A2C7E443D0097E0C0 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +129,9 @@
 			children = (
 				B7613BEF2C8C5E4B0097E0C0 /* Info.plist */,
 				B7613B3C2C7E443D0097E0C0 /* WatchOS_biltzApp.swift */,
-				B7613BE22C8C4B150097E0C0 /* Utils */,
+				B75DF9CE2C98A64C00F22B6B /* Components */,
+				B75DF9D32C98A65C00F22B6B /* Managers */,
+				B75DF9C82C98A5D800F22B6B /* Utils */,
 				B7613B4E2C7E4B060097E0C0 /* Views */,
 				B7613B402C7E443E0097E0C0 /* Assets.xcassets */,
 				B7613B422C7E443E0097E0C0 /* Preview Content */,
@@ -106,29 +150,11 @@
 		B7613B4E2C7E4B060097E0C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B7613BDF2C8C4B0B0097E0C0 /* SettingsView */,
 				B7613B3E2C7E443D0097E0C0 /* ContentView.swift */,
 				B7613B4F2C7E4B1B0097E0C0 /* ContentViewModel.swift */,
+				B75DF9CB2C98A5EC00F22B6B /* SettingsView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B7613BDF2C8C4B0B0097E0C0 /* SettingsView */ = {
-			isa = PBXGroup;
-			children = (
-				B7613BDE2C8C4B0B0097E0C0 /* SettingsView.swift */,
-			);
-			name = SettingsView;
-			path = ../../../../Downloads/SettingsView;
-			sourceTree = "<group>";
-		};
-		B7613BE22C8C4B150097E0C0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B7613BE12C8C4B150097E0C0 /* Constants.swift */,
-			);
-			name = Utils;
-			path = ../../../Downloads/Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,11 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7613BE32C8C4B150097E0C0 /* Constants.swift in Sources */,
+				B75DF9D42C98A65C00F22B6B /* IAPManager.swift in Sources */,
+				B75DF9CC2C98A5EC00F22B6B /* SettingsView.swift in Sources */,
 				B7613B3F2C7E443D0097E0C0 /* ContentView.swift in Sources */,
-				B7613BE02C8C4B0B0097E0C0 /* SettingsView.swift in Sources */,
+				B75DF9CF2C98A64C00F22B6B /* PurchaseButton.swift in Sources */,
+				B75DF9D62C98A65C00F22B6B /* VersionManager.swift in Sources */,
 				B7613B3D2C7E443D0097E0C0 /* WatchOS_biltzApp.swift in Sources */,
 				B7613B502C7E4B1B0097E0C0 /* ContentViewModel.swift in Sources */,
+				B75DF9D52C98A65C00F22B6B /* UserManager.swift in Sources */,
+				B75DF9C92C98A5D800F22B6B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
