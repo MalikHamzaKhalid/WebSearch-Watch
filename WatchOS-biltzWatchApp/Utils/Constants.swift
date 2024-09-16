@@ -7,8 +7,8 @@ import Foundation
 
 struct Constants {
     
-    static let kTermsConditions = "https://apps.blitzinteractive.io/wp-json/wp/v2/pages/7434"
-    static let kPrivacyPolicy = "https://apps.blitzinteractive.io/wp-json/wp/v2/pages/3"
+    static let kTermsConditions = "https://apps.blitzinteractive.io/terms-and-conditions/"
+    static let kPrivacyPolicy = "https://apps.blitzinteractive.io/privacy-policy/"
     
     struct UserDefaultsKeys {
         static let creditsInitialized = "creditsInitialized"

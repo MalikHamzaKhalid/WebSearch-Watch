@@ -68,6 +68,9 @@ struct ContentView: View {
                 }
                 .listStyle(CarouselListStyle())
             }
+            .sheet(isPresented: $viewModel.showPurchaseAlert) {
+                InAppPurchaseView()
+            }
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     NavigationLink(destination: SettingsView()) {

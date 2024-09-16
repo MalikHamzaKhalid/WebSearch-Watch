@@ -10,6 +10,8 @@ class ContentViewModel: ObservableObject {
     
     @Published var items: [Item] = []
     @Published var errorMessage: String = ""
+    @Published var showPurchaseAlert = false
+    
     private var currentPage = 0
     private var resultsPerPage = 10 // Change this based on your API settings
     var isLoading = false
@@ -28,11 +30,22 @@ class ContentViewModel: ObservableObject {
         
         guard !isLoading else { return } // Prevent multiple simultaneous requests
         
+        if UserManager.shared.consumeCredit() {
+            print("Credit consumed. Remaining credits: \(UserManager.shared.getCurrentCredits())")
+//            showPurchaseAlert = true
+//            return
+        } else {
+            print("No credits left. Please purchase more.")
+            showPurchaseAlert = true
+            return
+        }
+        
         currentPage = page
         isLoading = true
         
         let query = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-               
+        
+        // Calculate the correct start index based on currentPage and resultsPerPage
         let startIndex = resultsPerPage * currentPage
         
         let urlString = "https://customsearch.googleapis.com/customsearch/v1?q=\(query)&key=\(apiKey)&cx=\(cx)&start=\(startIndex)"
@@ -112,31 +125,31 @@ struct Item: Codable, Identifiable {
     let displayLink, snippet, htmlSnippet: String?
     
     // Custom initializer to set the ID after decoding
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            self.title = try container.decodeIfPresent(String.self, forKey: .title)
-            self.htmlTitle = try container.decodeIfPresent(String.self, forKey: .htmlTitle)
-            self.link = try container.decodeIfPresent(String.self, forKey: .link)
-            self.displayLink = try container.decodeIfPresent(String.self, forKey: .displayLink)
-            self.snippet = try container.decodeIfPresent(String.self, forKey: .snippet)
-            self.htmlSnippet = try container.decodeIfPresent(String.self, forKey: .htmlSnippet)
-            // Assign a unique ID after decoding
-            self.id = UUID().uuidString
-        }
-
-        // Default initializer for manual creation of Item objects
-        init(id: String = UUID().uuidString, title: String?, htmlTitle: String?, link: String?, displayLink: String?, snippet: String?, htmlSnippet: String?) {
-            self.id = id
-            self.title = title
-            self.htmlTitle = htmlTitle
-            self.link = link
-            self.displayLink = displayLink
-            self.snippet = snippet
-            self.htmlSnippet = htmlSnippet
-        }
-
-        // Define the keys used in the decoding process
-        enum CodingKeys: String, CodingKey {
-            case title, htmlTitle, link, displayLink, snippet, htmlSnippet
-        }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try container.decodeIfPresent(String.self, forKey: .title)
+        self.htmlTitle = try container.decodeIfPresent(String.self, forKey: .htmlTitle)
+        self.link = try container.decodeIfPresent(String.self, forKey: .link)
+        self.displayLink = try container.decodeIfPresent(String.self, forKey: .displayLink)
+        self.snippet = try container.decodeIfPresent(String.self, forKey: .snippet)
+        self.htmlSnippet = try container.decodeIfPresent(String.self, forKey: .htmlSnippet)
+        // Assign a unique ID after decoding
+        self.id = UUID().uuidString
+    }
+    
+    // Default initializer for manual creation of Item objects
+    init(id: String = UUID().uuidString, title: String?, htmlTitle: String?, link: String?, displayLink: String?, snippet: String?, htmlSnippet: String?) {
+        self.id = id
+        self.title = title
+        self.htmlTitle = htmlTitle
+        self.link = link
+        self.displayLink = displayLink
+        self.snippet = snippet
+        self.htmlSnippet = htmlSnippet
+    }
+    
+    // Define the keys used in the decoding process
+    enum CodingKeys: String, CodingKey {
+        case title, htmlTitle, link, displayLink, snippet, htmlSnippet
+    }
 }
