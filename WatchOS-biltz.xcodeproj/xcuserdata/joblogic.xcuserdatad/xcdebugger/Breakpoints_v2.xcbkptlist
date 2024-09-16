@@ -82,36 +82,6 @@
             endingLineNumber = "36"
             landmarkName = "productsRequest(_:didReceive:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CD11864B-9709-44E1-B8D7-817E98A9766C - 4e90e2ab74a71164"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WatchOS_Blitz.IAPManager.productsRequest(_: __C.SKProductsRequest, didReceive: __C.SKProductsResponse) -&gt; ()"
-                  moduleName = "WatchOS-Blitz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joblogic/Desktop/WatchOS-biltz/WatchOS-biltzWatchApp/Managers/IAPManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-               <Location
-                  uuid = "CD11864B-9709-44E1-B8D7-817E98A9766C - d544a425592b026c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in WatchOS_Blitz.IAPManager.productsRequest(_: __C.SKProductsRequest, didReceive: __C.SKProductsResponse) -&gt; ()"
-                  moduleName = "WatchOS-Blitz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joblogic/Desktop/WatchOS-biltz/WatchOS-biltzWatchApp/Managers/IAPManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

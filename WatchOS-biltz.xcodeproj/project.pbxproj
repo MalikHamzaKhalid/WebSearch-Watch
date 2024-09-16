@@ -436,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app.watchkitapp;
 				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -467,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wristsearch.app.watchkitapp;
 				PRODUCT_NAME = "WatchOS-Blitz";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
