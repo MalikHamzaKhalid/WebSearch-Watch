@@ -29,6 +29,26 @@ struct InAppPurchaseView: View {
                             iapManager.purchaseCredits(productID: Constants.IAPProductIdentifiers.credits300)
                         }
                         
+                        PurchaseButton(title: "Restore Purchases", isProcessing: $iapManager.isProcessingPurchase) {
+                            iapManager.restorePurchases()
+                        }
+                        
+                        Section(header: Text("Legal")) {
+                            Link(destination: URL(string: Constants.kPrivacyPolicy)!) {
+                                HStack {
+                                    Text("Privacy Policy")
+                                        .font(.system(size: 13))  // Decrease font size
+                                }
+                            }
+                            
+                            Link(destination: URL(string: Constants.kTermsConditions)!) {
+                                HStack {
+                                    Text("Terms and Conditions")
+                                        .font(.system(size: 13))  // Decrease font size
+                                }
+                            }
+                        }
+                        
                         Button(action: {
                             presentationMode.wrappedValue.dismiss()
                         }) {

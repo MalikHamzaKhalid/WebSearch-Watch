@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var iapManager = IAPManager.shared
+    @State var showPurchaseAlert = false
 
     var body: some View {
         ZStack {
@@ -34,8 +35,18 @@ struct SettingsView: View {
                     }
                 }
                 
-                // Restore Purchases Section
                 Section {
+                    Button(action: {
+                        showPurchaseAlert = true
+                    }) {
+                        HStack {
+                            Image(systemName: "star.fill")
+                                .imageScale(.small)
+                            Text("Try Pro")
+                                .font(.system(size: 14))
+                        }
+                    }
+                    
                     Button(action: {
                         iapManager.restorePurchases()
                     }) {
@@ -64,6 +75,9 @@ struct SettingsView: View {
         .navigationTitle("Settings")
         .alert(isPresented: $iapManager.showAlert) {
             Alert(title: Text("Purchase Status"), message: Text(iapManager.alertMessage), dismissButton: .default(Text("OK")))
+        }
+        .sheet(isPresented: $showPurchaseAlert) {
+            InAppPurchaseView()
         }
     }
 }
