@@ -32,7 +32,7 @@ class ContentViewModel: ObservableObject {
         guard !isLoading else { return } // Prevent multiple simultaneous requests
         
         // If there is no credit then show the purchases alert
-        if UserManager.shared.hasCredits() {
+        if !UserManager.shared.hasCredits() {
             print("No credits left. Please purchase more.")
             showPurchaseAlert = true
             return
