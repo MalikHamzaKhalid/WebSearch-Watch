@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct InAppPurchaseView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -34,18 +35,21 @@ struct InAppPurchaseView: View {
                         }
                         
                         Section(header: Text("Legal")) {
-                            Link(destination: URL(string: Constants.kPrivacyPolicy)!) {
-                                HStack {
-                                    Text("Privacy Policy")
-                                        .font(.system(size: 13))  // Decrease font size
-                                }
+                            Button(action: {
+                                openUrl(url: Constants.kPrivacyPolicy)
+                            }) {
+                                Text("Privacy Policy")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.blue)
+                                    .lineLimit(1)
                             }
-                            
-                            Link(destination: URL(string: Constants.kTermsConditions)!) {
-                                HStack {
-                                    Text("Terms and Conditions")
-                                        .font(.system(size: 13))  // Decrease font size
-                                }
+                            Button(action: {
+                                openUrl(url: Constants.kTermsConditions)
+                            }) {
+                                Text("Terms and Conditions")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.blue)
+                                    .lineLimit(1)
                             }
                         }
                         
@@ -87,6 +91,24 @@ struct InAppPurchaseView: View {
         .onAppear {
             iapManager.isProcessingPurchase = false
         }
+    }
+    
+    func openUrl(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        let session = ASWebAuthenticationSession(
+            url: url,
+            callbackURLScheme: nil
+        ) { _, _ in
+            
+        }
+        
+        // Makes the "Watch App Wants To Use example.com to Sign In" popup not show up
+        session.prefersEphemeralWebBrowserSession = true
+        
+        session.start()
     }
 
 }

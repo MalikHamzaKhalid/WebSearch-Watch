@@ -4,6 +4,7 @@
 
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
     
@@ -41,15 +42,19 @@ struct ContentView: View {
                                     .font(.system(size: 14))
                                     .lineLimit(3)
                                 
-                                Text(item.displayLink ?? "")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(.gray)
-                                    .lineLimit(1)
-                            }
-                            Spacer()
-                            Link(destination: URL(string: item.link ?? "")!) {
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.blue)
+                                Button(action: {
+                                    viewModel.openUrl(url: item.link ?? "")
+                                }) {
+                                    HStack {
+                                        Text(item.displayLink ?? "")
+                                            .font(.system(size: 12))
+                                            .foregroundColor(.blue)
+                                            .lineLimit(1)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(.blue)
+                                    }
+                                }
                             }
                         }
                         .padding(.vertical, 4)

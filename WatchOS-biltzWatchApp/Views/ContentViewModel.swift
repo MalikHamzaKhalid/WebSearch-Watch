@@ -3,6 +3,7 @@
 //  WatchOS-biltz Watch App
 
 import SwiftUI
+import AuthenticationServices
 
 class ContentViewModel: ObservableObject {
     
@@ -31,7 +32,7 @@ class ContentViewModel: ObservableObject {
         guard !isLoading else { return } // Prevent multiple simultaneous requests
         
         // If there is no credit then show the purchases alert
-        if !UserManager.shared.hasCredits() {
+        if UserManager.shared.hasCredits() {
             print("No credits left. Please purchase more.")
             showPurchaseAlert = true
             return
@@ -108,6 +109,24 @@ class ContentViewModel: ObservableObject {
                 }
             }
         }.resume()
+    }
+    
+    func openUrl(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        let session = ASWebAuthenticationSession(
+            url: url,
+            callbackURLScheme: nil
+        ) { _, _ in
+            
+        }
+        
+        // Makes the "Watch App Wants To Use example.com to Sign In" popup not show up
+        session.prefersEphemeralWebBrowserSession = true
+        
+        session.start()
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct SettingsView: View {
     @ObservedObject var iapManager = IAPManager.shared
@@ -16,22 +17,12 @@ struct SettingsView: View {
             List {
                 // Privacy Policy and Terms Section
                 Section(header: Text("Legal")) {
-                    Link(destination: URL(string: Constants.kPrivacyPolicy)!) {
-                        HStack {
-                            Image(systemName: "doc.text")
-                                .imageScale(.small)  // Decrease icon size
-                            Text("Privacy Policy")
-                                .font(.system(size: 14))  // Decrease font size
-                        }
+                    Button("Privacy Policy") {
+                       openUrl(url: Constants.kPrivacyPolicy)
                     }
                     
-                    Link(destination: URL(string: Constants.kTermsConditions)!) {
-                        HStack {
-                            Image(systemName: "doc.text")
-                                .imageScale(.small)  // Decrease icon size
-                            Text("Terms and Conditions")
-                                .font(.system(size: 14))  // Decrease font size
-                        }
+                    Button("Terms and Conditions") {
+                       openUrl(url: Constants.kTermsConditions)
                     }
                 }
                 
@@ -79,6 +70,24 @@ struct SettingsView: View {
         .sheet(isPresented: $showPurchaseAlert) {
             InAppPurchaseView()
         }
+    }
+    
+    func openUrl(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        
+        let session = ASWebAuthenticationSession(
+            url: url,
+            callbackURLScheme: nil
+        ) { _, _ in
+            
+        }
+        
+        // Makes the "Watch App Wants To Use example.com to Sign In" popup not show up
+        session.prefersEphemeralWebBrowserSession = true
+        
+        session.start()
     }
 }
 
